@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: no-repeat center/cover url("../assets/bg-guess-the-word.png");
+  font-family: "Outfit", sans-serif;
+}
+body input,
+body button {
+  font-family: "Outfit", sans-serif;
+}
+body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .content {
+  width: 420px;
+  min-height: 400px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #030616;
+  border-radius: 10px;
+}
+@media (max-width: 640px) {
+  body .container .content {
+    width: 95vw;
+  }
+}
+body .container .content .title {
+  align-self: center;
+  padding-bottom: 10px;
+}
+body .container .content .word-container .word {
+  padding: 10px 25px;
+  background-color: #4a5567;
+  color: #97a3b6;
+  font-size: 32px;
+  text-align: center;
+  border-radius: 5px;
+}
+body .container .content .info {
+  padding: 20px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  body .container .content .info {
+    padding: 0;
+  }
+}
+body .container .content .info > * {
+  flex: 1;
+}
+body .container .content .info .label {
+  color: #4a5567;
+}
+body .container .content .info .tries {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+body .container .content .info .tries .dottes {
+  display: flex;
+  gap: 5px;
+}
+body .container .content .info .tries .dottes .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4a5567;
+}
+body .container .content .info .tries .dottes .dot.yet {
+  background-color: #7429c6;
+}
+body .container .content .info .mistakes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+}
+body .container .content .info .mistakes .wrong-words {
+  font-size: smaller;
+  font-weight: bold;
+  color: #97a3b6;
+}
+body .container .content .play {
+  padding: 25px 0;
+  display: flex;
+  gap: 5px;
+  align-self: center;
+}
+body .container .content .play .input {
+  width: 45px;
+  height: 45px;
+  background-color: #030616;
+  color: #f2f5f9;
+  text-align: center;
+  font-size: large;
+  border: 2px solid #4a5567;
+  border-radius: 10px;
+}
+@media (max-width: 640px) {
+  body .container .content .play .input {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .container .content .play .input:focus {
+  border: 0;
+  outline: 2px solid #672171;
+}
+body .container .content .play .input::-moz-placeholder {
+  color: #f2f5f9;
+}
+body .container .content .play .input::placeholder {
+  color: #f2f5f9;
+}
+body .container .content .actions {
+  padding-top: 20px;
+  display: flex;
+  gap: 35px;
+  align-self: center;
+}
+body .container .content .actions .btn-container {
+  padding-bottom: 5px;
+  background-color: #672171;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body .container .content .actions .btn-container .button {
+  padding: 10px 35px;
+  background-color: #c951e7;
+  color: #f2f5f9;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
