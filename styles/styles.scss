@@ -85,7 +85,7 @@ body {
         .mistakes {
           display: flex;
           align-items: center;
-          justify-content: end;
+          justify-content: flex-end;
           gap: 5px;
           .wrong-words {
             font-size: smaller;
@@ -110,14 +110,17 @@ body {
           color: #f2f5f9;
           text-align: center;
           font-size: large;
+          caret-color: transparent;
           border: 2px solid #4a5567;
           border-radius: 10px;
           &:focus {
             border: 0;
             outline: 2px solid #672171;
           }
+
           &::placeholder {
             color: #f2f5f9;
+            font-weight: bold;
           }
         }
       }

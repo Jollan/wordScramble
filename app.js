@@ -14,6 +14,8 @@ let answer = "";
 let tryCount = 0;
 let simpleReset = false;
 
+// document.createElement("input").addEventListener("");
+
 document.addEventListener("DOMContentLoaded", () => {
   newGame();
   randomButton.addEventListener("click", () => {
@@ -32,7 +34,7 @@ function newGame() {
   wordContainer.textContent = scrambleWord(word);
   play.innerHTML = "";
   for (let index = 0; index < word.length; index++) {
-    play.innerHTML += `<input class="input" type="text" placeholder="_" />`;
+    play.innerHTML += `<input class="input" type="text" />`;
   }
   trackGameEvolution();
   return true;
@@ -40,6 +42,16 @@ function newGame() {
 
 function trackGameEvolution() {
   inputs = Array.from(document.querySelectorAll(".input"));
+
+  inputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      input.placeholder = "_";
+    });
+    input.addEventListener("blur", () => {
+      input.placeholder = "";
+    });
+  });
+
   inputs[0].focus();
 
   inputs.forEach((input, index) => {
@@ -71,10 +83,13 @@ function trackGameEvolution() {
             });
             updateGameInfo();
           }
-        } else inputs[index + 1]?.focus();
-      } else {
-        input.value = "";
-      }
+        } else {
+          const next = inputs[index + 1];
+          if (next) {
+            next.focus();
+          }
+        }
+      } else input.value = "";
     });
   });
   return true;

@@ -90,7 +90,7 @@ body .container .content .info .tries .dottes .dot.yet {
 body .container .content .info .mistakes {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 5px;
 }
 body .container .content .info .mistakes .wrong-words {
@@ -111,6 +111,7 @@ body .container .content .play .input {
   color: #f2f5f9;
   text-align: center;
   font-size: large;
+  caret-color: transparent;
   border: 2px solid #4a5567;
   border-radius: 10px;
 }
@@ -126,9 +127,11 @@ body .container .content .play .input:focus {
 }
 body .container .content .play .input::-moz-placeholder {
   color: #f2f5f9;
+  font-weight: bold;
 }
 body .container .content .play .input::placeholder {
   color: #f2f5f9;
+  font-weight: bold;
 }
 body .container .content .actions {
   padding-top: 20px;
